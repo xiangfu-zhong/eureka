@@ -1,0 +1,27 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  client:
+    #false表示不向注册中心注册自己。
+    registerWithEureka: false
+    #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://192.168.126.146:8900/eureka/,http://192.168.126.147:8901/eureka/
+
+
+#eureka:
+#  instance:
+#    hostname: kubernetes-node1
+#  client:
+#    #false表示不向注册中心注册自己。
+#    registerWithEureka: false
+#    #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+#    fetchRegistry: false
+#    serviceUrl:
+#      defaultZone: http://kubernetes-node1:8761/eureka/
