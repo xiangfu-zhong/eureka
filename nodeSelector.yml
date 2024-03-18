@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: my-pod
+
+spec:
+  containers:
+    - name: my-pod
+      image: nginx
+      ports:
+        - name: http
+          containerPort: 80
+  nodeSelector:
+    disk: ssd  #如果nodeSelector中指定的标签节点都没有，该pod就会处于Pending状态（预选失败）
