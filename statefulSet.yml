@@ -19,7 +19,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
         - name: eureka
-          image: 192.168.126.146:80/repo/eureka1:v1.0.1
+          image: 192.168.126.146:80/repo/eureka:v1.0.0
           ports:
             - containerPort: 8761
           env:
